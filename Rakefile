@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "sid"
-  gem.homepage = "http://github.com/ramon.tayag/sid"
+  gem.homepage = "http://github.com/ramontayag/sid"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Have a separate, relative id column in your table}
+  gem.description = %Q{Useful for multi-tenant apps where the data lives on the same database, but you want the elements of a tenant to associate with each other via relative ids, not the absolute database id.}
   gem.email = "ramon@tayag.net"
   gem.authors = ["Ramon Tayag"]
   # dependencies defined in Gemfile
