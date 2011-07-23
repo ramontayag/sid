@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = %q{ramon@tayag.net}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -24,12 +24,13 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "Guardfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/sid.rb",
     "lib/sid/class_methods.rb",
     "lib/sid/instance_methods.rb",
+    "sid.gemspec",
     "spec/fixtures/page.rb",
     "spec/sid_spec.rb",
     "spec/spec_helper.rb",
