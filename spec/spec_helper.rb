@@ -5,6 +5,7 @@ require 'active_record'
 require 'rspec'
 require 'sid'
 require 'spec/fixtures/page'
+require 'spec/fixtures/category'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -21,13 +22,17 @@ RSpec.configure do |config|
 end
 
 def reset_database
-  %W(pages).each do |table_name|
+  %W(pages categories).each do |table_name|
     ActiveRecord::Base.connection.execute("DROP TABLE IF EXISTS '#{table_name}'")
   end
   ActiveRecord::Base.connection.create_table(:pages) do |t|
     t.string :name
     t.integer :account_id
     t.integer :sid
-    t.integer :sid_alternative
+  end
+  ActiveRecord::Base.connection.create_table(:categories) do |t|
+    t.string :name
+    t.integer :account_id
+    t.integer :alternative_sid
   end
 end

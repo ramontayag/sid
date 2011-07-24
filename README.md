@@ -14,6 +14,7 @@ In the models, add:
 
     class Page < ActiveRecord::Base
       has_sid :account_id
+      # has_sid, :account_id, :sid_column => :some_other_column # you can specify what column it will consider the sid column. Defaults to `sid`
     end
 
 ## Contributing to sid
