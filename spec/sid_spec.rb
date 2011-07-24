@@ -18,4 +18,8 @@ describe 'Sid' do
     Page.find_by_sid(2).destroy
     Page.create(:account_id => 1).sid.should == 5
   end
+
+  it "should allow setting of sid column" do
+    Category.create(:account_id => 1).alternative_sid.should == 1
+  end
 end
