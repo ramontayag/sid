@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sid}
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ramon Tayag"]
-  s.date = %q{2011-07-24}
+  s.date = %q{2011-07-31}
   s.description = %q{Useful for multi-tenant apps where the data lives on the same database, but you want the elements of a tenant to associate with each other via relative ids, not the absolute database id.}
   s.email = %q{ramon@tayag.net}
   s.extra_rdoc_files = [
