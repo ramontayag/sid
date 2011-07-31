@@ -13,11 +13,12 @@ module Sid
     def set_sid_column
       scoped_by = self.class.sid_config[:scoped_by]
       collection = self.class.where(scoped_by => self.send(scoped_by))
+      last = collection.reorder('id').last
 
-      if collection.count.zero?
-        self.sid_column = 1
+      self.sid_column = if last
+        last.sid_column + 1
       else
-        self.sid_column = collection.reorder('id').last.sid_column + 1
+        1
       end
     end
   end
